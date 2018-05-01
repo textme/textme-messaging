@@ -16,9 +16,9 @@ import array
 import os
 import random
 
-from messaging.utils import debug
-from messaging.mms import message, wsp_pdu
-from messaging.mms.iterator import PreviewIterator
+from textme_messaging.utils import debug
+from textme_messaging.mms import message, wsp_pdu
+from textme_messaging.mms.iterator import PreviewIterator
 
 
 def flatten_list(x):
@@ -141,7 +141,8 @@ class MMSDecoder(wsp_pdu.Decoder):
                 break
 
             if header == mms_field_names[0x04][0]:
-                content_type_found = True
+                if value and value[0] != 'application/octet-stream':
+                    content_type_found = True
             else:
                 self._mms_message.headers[header] = value
 

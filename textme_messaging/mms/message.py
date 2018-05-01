@@ -218,7 +218,7 @@ class MMSMessage:
         :return: The binary-encoded MMS data, as an array of bytes
         :rtype: array.array('B')
         """
-        from messaging.mms import mms_pdu
+        from textme_messaging.mms import mms_pdu
         encoder = mms_pdu.MMSEncoder()
         return encoder.encode(self)
 
@@ -247,7 +247,7 @@ class MMSMessage:
         :param data: The data to load
         :type filename: array.array
         """
-        from messaging.mms import mms_pdu
+        from textme_messaging.mms import mms_pdu
         decoder = mms_pdu.MMSDecoder()
         return decoder.decode_data(data)
 
@@ -261,7 +261,7 @@ class MMSMessage:
         :param filename: The name of the file to load
         :type filename: str
         """
-        from messaging.mms import mms_pdu
+        from textme_messaging.mms import mms_pdu
         decoder = mms_pdu.MMSDecoder()
         return decoder.decode_file(filename)
 

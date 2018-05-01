@@ -45,8 +45,8 @@ References used in the code and this document:
 import array
 from datetime import datetime
 
-from messaging.utils import debug
-from messaging.mms.iterator import PreviewIterator
+from textme_messaging.utils import debug
+from textme_messaging.mms.iterator import PreviewIterator
 
 wsp_pdu_types = {
     0x01: 'Connect',
