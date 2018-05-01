@@ -1,6 +1,6 @@
 SHELL = /bin/bash
 
-VERSION := $(shell python -c 'from messaging import VERSION; print "%s.%s.%s" % VERSION')
+VERSION := $(shell python -c 'from textme_messaging import VERSION; print "%s.%s.%s" % VERSION')
 SOURCES := $(shell rpmbuild --eval '%{_topdir}' 2>/dev/null)/SOURCES
 PMV := python-messaging-$(VERSION)
 
@@ -18,7 +18,7 @@ rpm:
 	fi
 
 	tar -zcvf $(SOURCES)/$(PMV).tar.gz --exclude=.git --transform="s/^\./$(PMV)/" .
-	rpmbuild -ba python-messaging.spec
+	rpmbuild -ba textme-messaging.spec
 
 deb:
 	@if [ ! -d /var/lib/dpkg ] ;\

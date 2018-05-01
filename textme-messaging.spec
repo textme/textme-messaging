@@ -1,7 +1,7 @@
 %{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 
-Name:           python-messaging
-Version:        %(%{__python} -c 'from messaging import VERSION; print "%s.%s.%s" % VERSION')
+Name:           textme-messaging
+Version:        %(%{__python} -c 'from textme_messaging import VERSION; print "%s.%s.%s" % VERSION')
 Release:        1%{?dist}
 Summary:        SMS encoder/decoder library
 License:        GPL
@@ -39,6 +39,9 @@ Pure python SMS encoder/decoder library
 %doc README
 
 %changelog
+
+* Tue May 01 2018 - Tristan Mahe <tristan@go-text.me> - 0.5.14
+- New release
 
 * Tue Jan 24 2012 - Andrew Bird <ajb@spheresystems.co.uk> - 0.5.12
 - New release
