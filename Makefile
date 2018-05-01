@@ -2,7 +2,7 @@ SHELL = /bin/bash
 
 VERSION := $(shell python -c 'from textme_messaging import VERSION; print "%s.%s.%s" % VERSION')
 SOURCES := $(shell rpmbuild --eval '%{_topdir}' 2>/dev/null)/SOURCES
-PMV := python-messaging-$(VERSION)
+PMV := textme-messaging-$(VERSION)
 
 all:
 	@echo Usage: make deb \[TARGET=ubuntu-lucid\] \| rpm
