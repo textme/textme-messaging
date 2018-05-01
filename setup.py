@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 import sys
-from messaging import VERSION
+from textme_messaging import VERSION
 
 extra = {}
 if sys.version_info >= (3,):
