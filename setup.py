@@ -6,7 +6,7 @@ extra = {}
 if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
-setup(name="python-messaging",
+setup(name="textme-messaging",
       version='%s.%s.%s' % VERSION,
       description='SMS/MMS encoder/decoder',
       license=open('COPYING').read(),
